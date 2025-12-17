@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .perspective-1500 {
+    perspective: 1500px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 280 30% 98%; /* Light Purpleish White */
+    --foreground: 260 20% 15%;
+  }
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(0.5); opacity: 0; }
+  20% { opacity: 1; }
+  100% { transform: translateY(-40px) scale(1); opacity: 0; }
+}
+
+.animate-float {
+  animation: floatUp 2s ease-out infinite;
+}
+
+  body, button, a, input, textarea, select {
+    @apply bg-background text-foreground antialiased font-sans;
+    /* Hide default cursor everywhere to show our custom Sakamoto cursor */
+    cursor: none !important; 
+  }
+  
+  /* Ensure hover states don't bring it back */
+  *:hover {
+    cursor: none !important;
+  }
+}
+
+/* Animations */
+@keyframes blink {
+    0%, 90%, 100% { opacity: 1; transform: scaleY(1); }
+    95% { opacity: 0; transform: scaleY(0.1); }
+}
+
+.animate-blink {
+    animation: blink 4s infinite;
+}
+ 
+/* Lenis Recommended CSS */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
