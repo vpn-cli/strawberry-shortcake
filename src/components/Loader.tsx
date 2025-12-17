@@ -10,8 +10,8 @@ export default function Loader() {
             <Heart className="w-24 h-24 text-pink-400" fill="currentColor" />
         </div>
       </div>
-      <p className="mt-8 text-pink-500 font-bold text-xl animate-pulse font-mono tracking-widest">
-        LOADING...
+      <p className="mt-8 text-pink-500 font-bold text-xl animate-pulse font-handwriting tracking-widest">
+        just keep swimming 🐠...
       </p>
     </div>
   )

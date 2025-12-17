@@ -22,13 +22,20 @@ import CustomCursor from './components/CustomCursor'
 
 import PartyOverlay from './components/PartyOverlay'
 import CakeModal from './components/CakeModal'
+import Loader from './components/Loader'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function App() {
   const [showCake, setShowCake] = React.useState(false)
   const [showParty, setShowParty] = React.useState(false)
+  const [isLoading, setIsLoading] = React.useState(true)
   const heroRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 2500)
+    return () => clearTimeout(timer)
+  }, [])
   
   const triggerConfetti = () => {
     const duration = 3 * 1000;
@@ -73,6 +80,8 @@ export default function App() {
 
     return () => ctx.revert()
   }, [])
+
+  if (isLoading) return <Loader />
 
   return (
     <SmoothScroll>
