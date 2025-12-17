@@ -9,7 +9,7 @@ export default function FloatingBalloons() {
       const balloons = document.querySelectorAll('.balloon')
       
       balloons.forEach((balloon) => {
-        const speed = 1 + Math.random() * 2
+
         const wobble = Math.random() * 20
         
         gsap.to(balloon, {

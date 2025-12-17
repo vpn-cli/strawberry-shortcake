@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import { Heart } from 'lucide-react'
 

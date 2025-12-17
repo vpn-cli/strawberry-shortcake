@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { twMerge } from 'tailwind-merge'
-import { Heart, ChevronRight, ChevronLeft } from 'lucide-react'
+import { Heart } from 'lucide-react'
 
 import img1 from '../assets/111.jpg'
 import img2 from '../assets/222.jpg'

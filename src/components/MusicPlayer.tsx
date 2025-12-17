@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Music, Heart } from 'lucide-react'
 import { twMerge } from 'tailwind-merge'
 import song from '../assets/Apocalypse.mp3'
