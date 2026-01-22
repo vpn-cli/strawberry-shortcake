@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Gift, Sparkles, Heart } from 'lucide-react'
 import confetti from 'canvas-confetti'
+import { Analytics } from '@vercel/analytics/react'
 import SmoothScroll from './components/SmoothScroll'
 // import SplineScene from './components/SplineScene'
 // import FloatingBalloons from './components/FloatingBalloons'
@@ -86,6 +87,7 @@ export default function App() {
   return (
     <SmoothScroll>
       <div className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-rose-50 overflow-hidden text-slate-800 font-sans selection:bg-pink-200">
+        <Analytics />
         {/* Soft atmospheric glow */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-rose-100/40 via-transparent to-transparent pointer-events-none" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-orange-50/40 via-transparent to-transparent pointer-events-none" />
